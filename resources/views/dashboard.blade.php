@@ -11,7 +11,7 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
-                                <h2 class="text-white mb-0">Sales value</h2>
+                                <h2 class="text-white mb-0">Analytics </h2>
                             </div>
                             <div class="col">
                                 <ul class="nav nav-pills justify-content-end">
@@ -46,7 +46,7 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                                <h2 class="mb-0">Total orders</h2>
+                                <h2 class="mb-0">Total FLights </h2>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                                         340
                                     </td>
                                     <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
+                                        <i class="fas fa-arrow-up text-success mr-3"></i> 88.5%
                                     </td>
                                 </tr>
                                 <tr>
@@ -109,7 +109,7 @@
                                         319
                                     </td>
                                     <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
+                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 70.8%
                                     </td>
                                 </tr>
                                 <tr>
@@ -123,7 +123,7 @@
                                         294
                                     </td>
                                     <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
+                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 80%
                                     </td>
                                 </tr>
                                 <tr>
@@ -137,7 +137,7 @@
                                         147
                                     </td>
                                     <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
+                                        <i class="fas fa-arrow-up text-success mr-3"></i> 90%
                                     </td>
                                 </tr>
                                 <tr>
