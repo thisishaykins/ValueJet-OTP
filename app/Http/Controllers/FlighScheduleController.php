@@ -17,7 +17,8 @@ class FlighScheduleController extends Controller
      */
     public function index(FlighSchedule $flight_schedule)
     {
-        $flight_schedule = $flight_schedule::groupBy('tail_no')->latest()->paginate(20);
+        // $flight_schedule = $flight_schedule::latest()->paginate(20)->groupBy('tail_no');
+        $flight_schedule = $flight_schedule::latest()->paginate(20);
         return view('flight_schedule.index', ['flight_schedules' => $flight_schedule]);
     }
 

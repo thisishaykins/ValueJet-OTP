@@ -33,18 +33,26 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('No.') }}</th>
-                                    <th scope="col">{{ __('Name') }}</th>
-                                    <!-- <th scope="col">{{ __('Image') }}</th> -->
-                                    <th scope="col">{{ __('Created By') }}</th>
-                                    <th scope="col">{{ __('Status') }}</th>
+                                    <th scope="col">{{ __('Tally Group') }}</th>
+                                    <th scope="col">{{ __('Flight Number') }}</th>
+                                    <th scope="col">{{ __('Origin') }}</th>
+                                    <th scope="col">{{ __('Destination') }}</th>
+                                    <th scope="col">{{ __('ETA') }}</th>
                                     <th scope="col">{{ __('Creation Date') }}</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php var_dump($flight_schedules); ?>
-                                
+                                @foreach ($flight_schedules as $key => $value_no)
+                                    <tr>
+                                        <td>{{ $value_no->tail_no }}</td>
+                                        <td>{{ $value_no->flight_no }}</td>
+                                        <td>{{ $value_no->origin }}</td>
+                                        <td>{{ $value_no->destination }}</td>
+                                        <td>{{ $value_no->eta }}</td>
+                                        <td>{{ $value_no->created_at }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
