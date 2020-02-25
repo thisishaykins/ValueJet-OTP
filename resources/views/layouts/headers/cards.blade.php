@@ -9,7 +9,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Total PAX</h5>
-                                    <span class="h2 font-weight-bold mb-0">3,897</span>
+                                    <span class="h2 font-weight-bold mb-0">{{ App\FlighSchedule::count() }}</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -29,8 +29,8 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0"> Next Flight  </h5>
-                                    <span class="h2 font-weight-bold mb-0"></span>
+                                    <h5 class="card-title text-uppercase text-muted mb-0"> Number of OTP Arrival</h5>
+                                    <span class="h2 font-weight-bold mb-0">{{ App\FlighSchedule::whereColumn('eta', 'ata')->count() }}</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -39,8 +39,8 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-muted text-sm">
-                                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i>LOSABV</span>
-                                <span class="text-nowrap">10 flights today</span>
+                                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i>10</span>
+                                <span class="text-nowrap">flights today</span>
                             </p>
                         </div>
                     </div>
@@ -50,8 +50,8 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Flight Details</h5>
-                                    <span class="h2 font-weight-bold mb-0"></span>
+                                    <h5 class="card-title text-uppercase text-muted mb-0"> Number of OTP Arrival</h5>
+                                    <span class="h2 font-weight-bold mb-0">{{ App\FlighSchedule::whereColumn('etd', 'atd')->count() }}</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -72,7 +72,10 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">On Time Performance</h5>
-                                    <span class="h2 font-weight-bold mb-0">89%</span>
+                                    <span class="h2 font-weight-bold mb-0">
+                                        <?php $flight_schedule = App\FlighSchedule::whereColumn(array('eta' => 'ata', 'etd' => 'atd'))->count(); $flight_total = App\FlighSchedule::count(); ?> 
+                                        @if($flight_schedule !== 0) {{ $flight_schedule / $flight_total * 100 }}{{__('%')}} @endif
+                                    </span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-info text-white rounded-circle shadow">
