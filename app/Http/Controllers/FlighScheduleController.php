@@ -110,6 +110,9 @@ class FlighScheduleController extends Controller
      */
     public function destroy(FlighSchedule $flighSchedule)
     {
-        //
+        $flighSchedule->delete();
+
+        return redirect()->route('flight-schedule.index')
+                        ->withStatus(__("Flight schedule successfully deleted."));
     }
 }
