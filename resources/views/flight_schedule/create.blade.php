@@ -99,8 +99,8 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('std') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-eta">{{ __('STD') }}</label>
-                                    <input type="text" name="std" id="input-std" class="form-control form-control-alternative{{ $errors->has('std') ? ' is-invalid' : '' }}" placeholder="{{ __('STD') }}" value="{{ old('std') }}" required>
+                                    <label class="form-control-label" for="input-eta">{{ __('PAX') }}</label>
+                                    <input type="text" name="std" id="input-std" class="form-control form-control-alternative{{ $errors->has('std') ? ' is-invalid' : '' }}" placeholder="{{ __('PAX') }}" value="{{ old('std') }}" required>
 
                                     @if ($errors->has('std'))
                                         <span class="invalid-feedback" role="alert">
